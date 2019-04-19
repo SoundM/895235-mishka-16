@@ -1,0 +1,28 @@
+.site-list {
+  width: 100%;
+  .list-reset();
+  display: flex;
+  flex-direction: column;
+
+  background-color: @bg-white;
+  box-shadow: 0 1px 0 0 @border-shadows-grey, inset 0 1px 0 0 @border-shadows-grey;
+}
+
+.site-list__item {
+  .mp-reset();
+  padding-top: 32px;
+  padding-left: 76px;
+  padding-bottom: 30px;
+  padding-right: auto;
+  border-top: solid 1px @border-shadows-grey;
+}
+
+.site-list__item--link {
+  font-size: 17px;
+  line-height: 24px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: @font-black;
+  font-weight: bold;
+
+  background-color: @bg-white;
+}

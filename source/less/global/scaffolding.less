@@ -1,0 +1,33 @@
+body {
+  min-width: 320px;
+  .mp-reset();
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 20px;
+  color: @font-black;
+  font-style: normal;
+
+  background-color: @bg-white;
+  box-shadow: 0 1px 0 0 @border-shadows-grey, inset 0 1px 0 0 @border-shadows-grey;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  .mp-reset();
+  display: inline-block;
+  vertical-align: middle;
+
+  text-decoration: none;
+  background-color: @bg-white;
+  border: none;
+  cursor: pointer;
+}
