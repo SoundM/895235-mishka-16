@@ -1,16 +1,15 @@
 .site-list {
   width: 100%;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
+  .list-reset();
   display: flex;
   flex-direction: column;
+
+  background-color: @bg-white;
+  box-shadow: 0 1px 0 0 @border-shadows-grey, inset 0 1px 0 0 @border-shadows-grey;
 }
 
 .site-list__item {
-  margin: 0;
-  padding: 0;
+  .mp-reset();
   padding-top: 32px;
   padding-left: 76px;
   padding-bottom: 30px;
@@ -20,7 +19,7 @@
 
 .site-list__item--link {
   font-size: 17px;
-  line-height: 20px;
+  line-height: 24px;
   font-family: "Open Sans", "Arial", sans-serif;
   color: @font-black;
   font-weight: bold;
