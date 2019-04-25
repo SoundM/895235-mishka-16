@@ -8,3 +8,87 @@
   margin: 0;
   padding: 0;
 }
+
+.zigzag-grey-mobile() {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  display: flex;
+  width: 100%;
+  height: 7px;
+  background-image: url("../../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-position: -5px top;
+  background-size: auto 6px;
+  z-index: 2;
+}
+
+.zigzag-grey-tablet() {
+  content: "";
+  position: absolute;
+  left: -7px;
+  bottom: -5px;
+  display: flex;
+  width: 100%;
+  height: 15px;
+  background-image: url("../../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-position: -5px top;
+  background-size: auto 15.1px;
+  z-index: 2;
+}
+
+.zigzag-tablet() {
+  content: "";
+  position: absolute;
+  left: 3px;
+  bottom: -5px;
+  display: flex;
+  width: 100%;
+  height: 15px;
+  background-image: url("../../img/bg-zigzag-fill.svg");
+  background-repeat: repeat-x;
+  background-position: -5px top;
+  background-size: auto 22.8px;
+  z-index: 2;
+}
+
+.zigzag-desktop() {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  display: flex;
+  width: 100%;
+  height: 28px;
+  background-image: url("../../img/bg-zigzag-fill.svg");
+  background-repeat: repeat-x;
+  background-position: 0 top;
+  background-size: auto 34px;
+  z-index: 2;
+}
+
+.zigzag-grey-desktop() {
+  content: "";
+  position: absolute;
+  left: -19px;
+  bottom: -12px;
+  display: flex;
+  width: 100%;
+  height: 22px;
+  background-image: url("../../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-position: -5px top;
+  background-size: auto 21px;
+  z-index: 2;
+}
+
+.no-outline() {
+  outline: none;
+  background: transparent;
+
+  &::before {
+    display: none;
+  }
+}
