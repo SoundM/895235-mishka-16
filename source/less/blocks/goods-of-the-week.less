@@ -2,34 +2,74 @@
   .mp-reset();
 }
 
+.goods-of-the-week__wrapper {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.goods-of-the-week__title-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.goods-of-the-week__intro-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
 .goods-of-the-week__title {
+  .mp-reset();
+  margin-top: 2px;
+  margin-left: 29px;
   font-size: 17px;
   line-height: 20px;
   font-family: "Open Sans", "Arial", sans-serif;
   color: @font-sea-foam-blue;
   font-weight: bold;
+  text-transform: uppercase;
+}
 
-  background-color: @bg-white;
+.goods-of-the-week__picture {
+  width: 260px;
+  height: 315px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 21px;
 }
 
 .goods-of-the-week__call {
+  .mp-reset();
+  order: -1;
+  margin-left: 30px;
+  margin-top: 28px;
+  margin-bottom: 0;
+
   font-size: 25px;
   line-height: 30px;
   font-family: "Open Sans", "Arial", sans-serif;
   color: @font-black;
   font-weight: bold;
-
-  background-color: @bg-white;
 }
 
 .goods-of-the-week__intro {
+  .mp-reset();
+  width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  margin-bottom: 17px;
+
   font-size: 15px;
   line-height: 24px;
   font-family: "Open Sans", "Arial", sans-serif;
   color: @font-dark-grey;
   font-weight: normal;
-
-  background-color: @bg-white;
 }
 
 .goods-of-the-week__value {
@@ -38,8 +78,6 @@
   font-family: "Open Sans", "Arial", sans-serif;
   color: @font-dark-grey;
   font-weight: normal;
-
-  background-color: @bg-white;
 }
 
 .goods-of-the-week__field {
@@ -48,26 +86,179 @@
   font-family: "Open Sans", "Arial", sans-serif;
   color: @font-dark-grey;
   font-weight: normal;
-
-  background-color: @bg-white;
 }
 
 .goods-of-the-week__price {
+  text-align: center;
+  margin-bottom: 27px;
   font-size: 17px;
   line-height: 24px;
   font-family: "Open Sans", "Arial", sans-serif;
   color: @font-dark-grey;
   font-weight: bold;
-
-  background-color: @bg-white;
 }
 
 .goods-of-the-week__button {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 38px;
+  text-align: center;
   font-size: 17px;
   line-height: 20px;
   font-family: "Open Sans", "Arial", sans-serif;
   color: @font-dark-grey;
   font-weight: bold;
+}
 
-  background-color: @bg-white;
+.goods-of-the-week__list {
+  box-sizing: border-box;
+  width: 82%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 27px;
+  border-collapse: collapse;
+}
+
+.goods-of-the-week__list td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 32px;
+  border-bottom: 1px solid @border-shadows-grey;
+}
+
+.goods-of-the-week__wrapper::after {
+  .zigzag-grey-mobile();
+}
+
+@media (min-width: @tablet-width) {
+  .goods-of-the-week__wrapper {
+    width: 768px;
+  }
+
+  .goods-of-the-week__title-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .goods-of-the-week__call {
+    margin-left: 51px;
+    margin-top: 47px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .goods-of-the-week__title {
+    .mp-reset();
+    margin: 0;
+    padding: 0;
+    width: 71px;
+    margin-top: 58px;
+    margin-right: 80px;
+    margin-left: auto;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 17px;
+    line-height: 17px;
+    font-family: "Open Sans", "Arial", sans-serif;
+    color: #63d1bb;
+    font-weight: bold;
+  }
+
+  .goods-of-the-week__intro-wrapper {
+    .mp-reset();
+    width: 350px;
+    margin-top: 48px;
+    margin-left: 50px;
+  }
+
+  .goods-of-the-week__intro {
+    .mp-reset();
+    width: 290px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .goods-of-the-week__list {
+    .mp-reset();
+    margin-top: 37px;
+    margin-bottom: 56px;
+  }
+
+  .goods-of-the-week__list td {
+    padding-right: 5px;
+  }
+
+  .goods-of-the-week__price {
+    font-size: 20px;
+    text-align: left;
+    margin-left: 72px;
+    margin-bottom: 33px;
+  }
+
+  .goods-of-the-week__picture {
+    .mp-reset();
+    width: 333px;
+    height: 404px;
+    position: absolute;
+    top: 154px;
+    right: 52px;
+  }
+
+  .goods-of-the-week__button {
+    margin: 0;
+    margin-bottom: 62px;
+  }
+
+  .goods-of-the-week__wrapper::after {
+    .zigzag-grey-tablet();
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .goods-of-the-week__wrapper {
+    width: @desktop-width;
+  }
+
+  .goods-of-the-week__picture {
+    width: 525px;
+    height: 636px;
+    top: 70px;
+  }
+
+  .goods-of-the-week__title {
+    .mp-reset();
+    order: -1;
+    margin-top: 14px;
+  }
+
+  .goods-of-the-week__call {
+    .mp-reset();
+    margin-left: 52px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .goods-of-the-week__title-wrapper {
+    justify-content: flex-start;
+    margin-left: 96px;
+    margin-top: 124px;
+    z-index: 3;
+  }
+
+  .goods-of-the-week__intro-wrapper {
+    margin-left: 225px;
+  }
+
+  .goods-of-the-week__list {
+    margin-top: 50px;
+    margin-bottom: 110px;
+  }
+
+  .goods-of-the-week__button {
+    margin-bottom: 85px;
+  }
+
+  .goods-of-the-week__wrapper::after {
+    .zigzag-grey-desktop();
+  }
 }

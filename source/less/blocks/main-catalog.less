@@ -1,4 +1,35 @@
 .main-catalog__header {
-  min-height: 177px;
+  .mp-reset();
+  width: 100%;
   background-color: @bg-white-two;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 57px;
+  margin-bottom: 27px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-catalog__header {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 41px;
+    margin-top: -60px;
+    margin-bottom: 83px;
+  }
+
+  .main-catalog__header::after {
+    .zigzag-tablet();
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-catalog__header {
+    padding-top: 49px;
+    padding-bottom: 70px;
+    margin-bottom: 120px;
+  }
+
+  .main-catalog__header::after {
+    .zigzag-desktop();
+  }
 }

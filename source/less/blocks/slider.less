@@ -1,8 +1,21 @@
 .slider__toggle {
   display: block;
-  width: 127px;
-  min-height: 52px;
+  margin-top: 14px;
+  margin-bottom: 20px;
+  width: 129px;
+  height: 53px;
 
   border: solid 1px @border-shadows-grey;
   text-align: center;
+}
+
+.slider__toggles {
+  display: flex;
+}
+
+@media (min-width: @tablet-width) {
+  .slider__toggle {
+    border: none;
+    width: 82px;
+  }
 }

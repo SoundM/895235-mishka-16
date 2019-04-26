@@ -1,4 +1,16 @@
+.advantages {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
 .advantages__title {
+  .mp-reset();
+  margin-top: 31px;
+  margin-bottom: 5px;
   font-size: 25px;
   line-height: 30px;
   font-family: "Open Sans", "Arial", sans-serif;
@@ -10,14 +22,117 @@
 
 .advantages__list {
   .list-reset();
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.advantages__item {
+  .mp-reset();
+  padding-top: 81.5px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 260px;
 }
 
 .advantages__description {
+  .mp-reset();
   font-size: 17px;
   line-height: 20px;
   font-family: "Open Sans", "Arial", sans-serif;
   color: @font-black;
   font-weight: bold;
+}
 
-  background-color: @bg-white;
+.advantages__item svg {
+  position: absolute;
+  top: 30px;
+  left: 5px;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    width: 668px;
+    margin-bottom: 70px;
+  }
+
+  .advantages__title {
+    margin-top: 55px;
+    margin-bottom: -10px;
+    margin-left: -4px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .advantages__description {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .advantages__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .advantages__item {
+    width: 300px;
+    padding-top: 112px;
+    padding-right: 34px;
+  }
+
+  .advantages__item svg {
+    position: absolute;
+    top: 56px;
+    left: 10px;
+  }
+
+  .advantages__item--material {
+    order: -6;
+    width: 220px;
+    padding-right: 114px;
+  }
+
+  .advantages__item--scandinavia {
+    order: -4;
+    width: 260px;
+    padding-right: 74px;
+  }
+
+  .advantages__item--like {
+    order: -2;
+    width: 240px;
+    padding-right: 94px;
+  }
+
+  .advantages__item--with-love {
+    order: -5;
+  }
+
+  .advantages__item--support {
+    order: -3;
+  }
+
+  .advantages__item--gift-wrap {
+    width: 240px;
+    padding-right: 94px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__title {
+    margin-top: 70px;
+    margin-left: -4px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .advantages {
+    width: 704px;
+    margin-bottom: 85px;
+  }
+
+  .advantages__item {
+    margin-right: 17px;
+  }
 }

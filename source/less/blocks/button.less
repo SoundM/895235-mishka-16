@@ -5,6 +5,8 @@
 
   border: solid 2px @border-black;
   text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 a.button {
@@ -14,4 +16,10 @@ a.button {
 
 .button--catalog {
   width: 188px;
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    width: 287px;
+  }
 }
