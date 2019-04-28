@@ -12,12 +12,11 @@
 
   <header class="page-header">
     <div class="page-header__wrapper">
-      <button class="page-header__toggle nav-button" type="button">
-        <span class="visually-hidden"> Открыть/Закрыть меню</span>
-        <img src="img/icon-menu-open.svg" width="20" height="14" alt="Открыть меню">
-      </button>
-      <nav class="nav main-nav">
-        <ul class="main-nav__list site-list">
+      <nav class="main-nav main-nav--opened main-nav--nojs ">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden"> Открыть/Закрыть меню</span>
+          <!--  <img src="img/icon-menu-open.svg" width="20" height="14" alt="Открыть меню">-->
+        </button>        <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--logo">
             <a class="site-list__item--link" href="index.html">
               <img class="site-list__logo-icon" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
@@ -138,7 +137,7 @@
           </button>
         </div>
         <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <button class="production__button-order button button--catalog" type="button">Сделать заказ</button>
+        <a class="production__button-order button button--catalog" type="button">Сделать заказ</a>
       </section>
     </main>
 

@@ -12,11 +12,11 @@
 
     <header class="page-header">
       <div class="page-header__wrapper">
-        <button class="page-header__toggle nav-button" type="button">
-          <span class="visually-hidden"> Открыть/Закрыть меню</span>
-          <img src="img/icon-menu-open.svg" width="20" height="14" alt="Открыть меню">
-        </button>
-        <nav class="nav main-nav">
+        <nav class="main-nav main-nav--opened main-nav--nojs ">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden"> Открыть/Закрыть меню</span>
+          <!--  <img src="img/icon-menu-open.svg" width="20" height="14" alt="Открыть меню">-->
+          </button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--logo">
               <a class="site-list__item--link">
@@ -233,5 +233,7 @@
         </a>
       </div>
     </footer>
+
+    <script src="js/menu.js"></script>
   </body>
 </html>
