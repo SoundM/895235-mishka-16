@@ -19,7 +19,11 @@
         </button>        <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--logo">
             <a class="site-list__item--link" href="index.html">
-              <img class="site-list__logo-icon" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="site-list__logo-icon" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
+              </picture>
             </a>
           </li>
           <li class="site-list__item site-list__item--catalog site-list__item--current-page">
@@ -62,7 +66,11 @@
         <ul class="catalog-list">
           <li class="catalog-list__item catalog-card">
             <a class="catalog-card__photo" href="#">
-              <img src="img/card-1.png" width="260" height="195" alt="Зайчик-попрыгайчик">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
+                <img class="catalog-card__photo" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик">
+              </picture>
             </a>
             <div class=" catalog-card__title-wrapper">
               <a class="catalog-card__name" href="#">
@@ -82,7 +90,11 @@
           </li>
           <li class="catalog-list__item catalog-card">
             <a class="catalog-card__photo" href="#">
-                <img class="catalog-card__photo" src="img/card-2.png" width="260" height="195" alt="Корзинка для белья">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
+                <img class="catalog-card__photo" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" alt="Корзинка для белья">
+              </picture>
             </a>
             <div class=" catalog-card__title-wrapper">
               <a class="catalog-card__name" href="#">
@@ -102,7 +114,11 @@
           </li>
           <li class="catalog-list__item catalog-card">
             <a class="catalog-card__photo" href="#">
-              <img class="catalog-card__photo" src="img/card-3.png" width="260" height="195" alt="Большая корзинка для игрушек">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
+                <img class="catalog-card__photo" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек">
+              </picture>
             </a>
             <div class=" catalog-card__title-wrapper">
               <a class="catalog-card__name" href="#">
@@ -126,7 +142,11 @@
         <h2 class="production__title">Процесс производства </h2>
         <div class="production__video">
           <h3 class="visually-hidden">Видео изготовления товаров</h3>
-          <img src="img/video.png" width="260" height="150" alt="Видео о изготовлении">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <img class="catalog-card__photo" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Видео о изготовлении">
+          </picture>
           <button class="production__show" type="button">
             <span class="visually-hidden">Начать показ</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="100.678" height="76.891" viewBox="247.3 382.56 100.678 76.891">
@@ -137,7 +157,7 @@
           </button>
         </div>
         <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a class="production__button-order button button--catalog" type="button">Сделать заказ</a>
+        <a class="production__button-order button button--catalog" href="#">Сделать заказ</a>
       </section>
     </main>
 
@@ -178,5 +198,8 @@
         </a>
       </div>
     </footer>
+
+  <script src="js/menu.js"></script>
+
   </body>
 </html>
