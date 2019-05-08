@@ -98,11 +98,24 @@
   }
 
   .contacts__title {
+    position: relative;
     .mp-reset();
     width: 100%;
     font-size: 43px;
     line-height: 50px;
     margin-top: 66px;
+  }
+
+  .contacts__title::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: 55px;
+    display: block;
+    width: 46.7px;
+    height: 81.7px;
+    background: url("../../img/icon-flag.svg") no-repeat 50% 50%;
+    background-size: 46.7px 81.7px;
   }
 
   .contacts__address,
@@ -187,13 +200,25 @@
     display: block;
   }
 
-
   .contacts__title {
+    position: relative;
     width: 300px;
     margin-top: 111px;
     margin-bottom: 49px;
     font-size: 53px;
     line-height: 57px;
+  }
+
+  .contacts__title::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -108px;
+    display: block;
+    width: 46.7px;
+    height: 81.7px;
+    background: url("../../img/icon-flag.svg") no-repeat 50% 50%;
+    background-size: 46.7px 81.7px;
   }
 
   .contacts__address,
@@ -209,7 +234,7 @@
   }
 
   .contacts__write {
-    width: 230px;
+    width: 227px;
     margin-top: 50px;
     margin-right: auto;
     margin-left: 33px;
