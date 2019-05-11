@@ -48,6 +48,14 @@
   padding-right: auto;
 }
 
+.site-list__item--logo a:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.site-list__item--logo a:active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 .site-list__item--delivery,
 .site-list__item--sales,
 .site-list__item--new-items {
@@ -83,6 +91,14 @@
 .site-list__item--link:active .site-list__cart-icon {
   fill: @font-sea-foam-blue;
   opacity: 0.3;
+}
+
+a.site-list__item--link:hover span {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+a.site-list__item--link:active span {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .site-list__cart-icon {
