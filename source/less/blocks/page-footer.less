@@ -13,23 +13,23 @@
   background-color: @bg-white-two;
 }
 
-.page-footer__copyright {
-  .mp-reset();
-  margin-top: 16px;
-  margin-bottom: 23px;
-  margin-left: 69px;
-  margin-right: 69px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: @bg-white-two;
-}
-
 @media (min-width: @tablet-width) {
   .page-footer__logo {
     display: block;
     margin-left: 51px;
     margin-right: 138px;
+  }
+
+  .page-footer__logo:hover svg {
+    fill: @font-sea-blue;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .page-footer__logo:active svg {
+    fill: @font-sea-blue;
+    opacity: 0.3;
+    cursor: pointer;
   }
 
   .page-footer__logo a {
@@ -47,15 +47,6 @@
 
   .page-footer__social {
     padding-top: 7px;
-  }
-
-  .page-footer__copyright {
-    .mp-reset();
-    width: 185px;
-    margin-right: 50px;
-    margin-top: 22px;
-    margin-bottom: 23px;
-    margin-left: 61px;
   }
 }
 

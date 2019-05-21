@@ -1,0 +1,116 @@
+.modal-cart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: hsla(0, 0%, 100%, 0.9);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease, visibility 0.3s ease;
+}
+
+.modal-cart--open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-cart__wrapper {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  width: 320px;
+  height: 336px;
+  margin: 0;
+  padding: 0;
+  background-color: @bg-white;
+  box-shadow: inset 0 0 0 1px #e5e5e5, 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease, top 0.3s ease;
+}
+
+.modal-cart__wrapper--open {
+  top: 50%;
+  visibility: visible;
+  opacity: 1;
+  margin: 0 auto;
+}
+
+.modal-cart__fieldset-field {
+  .mp-reset();
+  padding: 0 30px;
+  border: none;
+}
+
+.modal-cart__title {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-top: 33px;
+  padding: 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: @font-black;
+  text-transform: uppercase;
+}
+
+.modal-cart__fieldset-field legend {
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding: 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: normal;
+  text-align: center;
+  color: @font-dark-grey;
+}
+
+.modal-cart__button {
+  .mp-reset();
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  background-color: @bg-sea-foam-blue;
+  border: @bg-sea-foam-blue;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: @font-white;
+  text-transform: uppercase;
+}
+
+.modal-cart__button:hover {
+  background-color: @bg-sea-foam-blue-two;
+}
+
+.modal-cart__button:active {
+  background-color: @bg-sea-foam-blue-two;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: @tablet-width) {
+  .modal-cart__wrapper {
+    width: 566px;
+  }
+
+  .modal-cart__fieldset-field {
+    padding: 0 108px;
+  }
+
+  .modal-cart__title {
+    width: 100%;
+    font-size: 30px;
+    line-height: 57px;
+  }
+}

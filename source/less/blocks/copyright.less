@@ -8,13 +8,42 @@
 
 .copyright__link {
   .mp-reset();
+  margin-top: 16px;
+  margin-bottom: 23px;
+  margin-left: 69px;
+  margin-right: 69px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: @bg-white-two;
 }
 
 .copyright__link svg {
   fill: @bg-sea-foam-blue;
 }
 
+.copyright__link:hover svg {
+  fill: @fill-icon-sea-blue;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.copyright__link:active svg {
+  fill: @fill-icon-sea-blue;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
 @media (min-width: @tablet-width) {
+  .copyright__link {
+    .mp-reset();
+    width: 185px;
+    margin-right: 50px;
+    margin-top: 22px;
+    margin-bottom: 23px;
+    margin-left: 61px;
+  }
+
   .copyright__link svg {
     padding-top: 9px;
   }

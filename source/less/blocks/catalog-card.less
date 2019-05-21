@@ -21,6 +21,11 @@
   border-left: solid 1px @border-shadows-grey;
 }
 
+.catalog-card__title-wrapper:hover,
+.catalog-card__title-wrapper:active {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
 .catalog-card__name {
   .mp-reset();
   width: 200px;
@@ -34,6 +39,14 @@
   font-family: "Open Sans", "Arial", sans-serif;
   color: @font-black;
   font-weight: bold;
+}
+
+.catalog-card__title:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.catalog-card__title:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .catalog-card__specification {
@@ -68,6 +81,24 @@
 
 .catalog-card__order {
   .mp-reset();
+  object-fit: contain;
+  opacity: 0.2;
+}
+
+.catalog-card__cart-icon {
+  width: 21px;
+  height: 18px;
+}
+
+.catalog-card__order:hover {
+  object-fit: contain;
+  fill: @fill-sea-foam-blue;
+  opacity: 1;
+}
+
+.catalog-card__order:active {
+  object-fit: contain;
+  fill: @fill-sea-foam-blue;
   opacity: 0.3;
 }
 

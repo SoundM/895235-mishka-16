@@ -1,0 +1,111 @@
+.color-list {
+  .list-reset();
+  display: flex;
+  flex-direction: column;
+}
+
+.color-list__item {
+  .mp-reset();
+  margin-bottom: 44px;
+  padding-left: 62px;
+  text-align: left;
+}
+
+.color-list__item label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+
+  font-size: 17px;
+  line-height: 18px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: @font-black;
+  font-weight: bold;
+}
+
+.color-list__input--checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -63px;
+  top: -9px;
+  width: 36px;
+  height: 33px;
+  border: 2px solid @border-black;
+}
+
+.color-list__input--checkbox:hover + label::before {
+  border: 2px solid @bg-sea-foam-blue-three;
+}
+
+.color-list__input--checkbox:active + label::before {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.color-list__input--checkbox:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: 4px;
+  left: -54px;
+
+  width: 22px;
+  height: 16px;
+  background-image: url("../../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.color-list li.color-list__item:nth-last-child(1) {
+  margin-bottom: 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .color-list {
+    .mp-reset();
+    margin-left: 166px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .color-list__item {
+    .mp-reset();
+    width: 31.3%;
+    margin: 0;
+    margin-bottom: 57px;
+    padding: 0;
+    padding-left: 80px;
+  }
+
+  .color-list__item label {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  .color-list__input--checkbox + label::before {
+    left: -80px;
+    top: -16px;
+    width: 50px;
+    height: 48px;
+  }
+
+  .color-list__input--checkbox:checked + label::after {
+    top: 0;
+    left: -70px;
+
+    width: 33px;
+    height: 22px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .color-list {
+    margin-left: 110px;
+  }
+
+  .color-list__item {
+    width: 156px;
+  }
+}

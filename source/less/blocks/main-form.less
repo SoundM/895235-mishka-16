@@ -1,0 +1,39 @@
+.main-form {
+  min-width: 320px;
+}
+
+.main-form__header {
+  .mp-reset();
+  width: 100%;
+  background-color: @bg-white-two;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 53px;
+  margin-bottom: 22px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-form__header {
+    position: relative;
+    padding-top: 58px;
+    padding-bottom: 44px;
+    margin-top: -60px;
+    margin-bottom: 75px;
+  }
+
+  .main-form__header::after {
+    .zigzag-tablet();
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-form__header {
+    padding-top: 49px;
+    padding-bottom: 70px;
+    margin-bottom: 112px;
+  }
+
+  .main-form__header::after {
+    .zigzag-desktop();
+  }
+}

@@ -10,16 +10,20 @@
       document.createElement( "picture" );
     </script>
     <script src="js/picturefill.js" async></script>
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="img/hero-mobile@1x.webp" as="image">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
 
   <body>
 
-  <div style="display:none;">
-    <include src="build/img/sprite.svg"></include>
-  </div>
+    <div style="display:none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
 
-  <header class="page-header">
+    <header class="page-header">
       <div class="page-header__wrapper">
         <nav class="main-nav main-nav--opened main-nav--nojs ">
           <button class="main-nav__toggle" type="button">
@@ -129,7 +133,7 @@
               <img class="goods-of-the-week__picture" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Фото товара недели">
             </picture>
             <span class="goods-of-the-week__price">Цена: 990 руб.</span>
-            <a class="goods-of-the-week__button button" href="#">Заказать</a>
+            <a class="goods-of-the-week__button button modal-button-js" href="#cart.html">Заказать</a>
           </div>
         </div>
       </section>
@@ -209,14 +213,13 @@
           <div class="contacts__wrapper--title">
             <h2 class="contacts__title">Контакты</h2>
             <span class="contacts__address--call">e-mail:</span>
-            <a class="contacts__address" href="info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+            <a class="contacts__address contacts__address--mail" href="info@mimimishkashop.ru">info@mimimishkashop.ru</a>
             <span class="contacts__address--call">адрес:</span>
             <span class="contacts__address">г. Санкт-Петербург,<br> ул. Большая Конюшенная, <br>д. 19/8, офис 101</span>
           </div>
-          <div  class="contacts__map">
-            <h2 class="visually-hidden">Карта</h2><!--
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002858!2d30.320858715760224!3d59.938719169054586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2spl!4v1554238695602!5m2!1sru!2spl" width="320" height="457" style="border: 0"  allowfullscreen></iframe>-->
-          </div>
+          <div  class="contacts__map contacts__map--google" id="google-map">
+            <h2 class="visually-hidden">Карта</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6027928179217!2d30.32086931603098!3d59.9387329818762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTnCsDU2JzE5LjQiTiAzMMKwMTknMjMuMCJF!5e0!3m2!1sru!2spl!4v1558398396850!5m2!1sru!2spl"  frameborder="0" style="border:0;" allowfullscreen></iframe></div>
           <a class="contacts__write button" href="#">Напишите нам</a>
         </div>
       </section>
@@ -261,8 +264,8 @@
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <b class="copyright__text">Разработано:</b>
           <span class="visually-hidden">HTML Academy</span>
           <svg width="26.943px" height="34.09px">
             <use xlink:href="img/sprite.svg#icon-logo-htmlacademy"></use>
@@ -271,6 +274,36 @@
       </div>
     </footer>
 
-    <script src="js/menu.js"></script>
+    <section class="modal-cart visually-hidden">
+      <div class="modal-cart__wrapper">
+        <h2 class="modal-cart__title">Добавить в корзину</h2>
+        <form action="https://echo.htmlacademy.ru" method="post" class="size-form">
+          <fieldset class="modal-cart__fieldset-field">
+            <legend class="modal-cart__filters-field--title">Выберите размер:</legend>
+            <ul class="modal-cart__checkbox-size checkbox-size">
+              <li class="checkbox-size__item">
+                <input class="visually-hidden checkbox-size__input checkbox-size__input--checkbox" type="checkbox" name="small" id="small-field" value="small-size" checked >
+                <label for="small-field">S</label>
+              </li>
+              <li class="checkbox-size__item">
+                <input class="visually-hidden checkbox-size__input checkbox-size__input--checkbox" type="checkbox" name="medium" id="medium-field" value="medium-size">
+                <label for="medium-field">M</label>
+              </li>
+              <li class="checkbox-size__item">
+                <input class="visually-hidden checkbox-size__input checkbox-size__input--checkbox" type="checkbox" name="large" id="large-field" value="large-size">
+                <label for="large-field">L</label>
+              </li>
+            </ul>
+            <button class="button modal-cart__button" type="submit">Добавить</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
+    <script src="js/main/menu.js"></script>
+    <script src="js/main/modal.js"></script>
+    <script src="js/main/map.js"></script>
+  <script src="js/style.min.js"></script>
+
   </body>
 </html>

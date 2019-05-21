@@ -10,6 +10,11 @@
   border: solid 1px @border-shadows-grey;
 }
 
+.production:hover,
+.production:active {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
 .production__title {
   .mp-reset();
   position: relative;
@@ -56,6 +61,28 @@
   position: absolute;
   top: 35px;
   left: 82px;
+  background-color: transparent;
+}
+
+.production__show:hover,
+.production__show:active,
+.production__show:focus {
+  outline: none;
+}
+
+.production__show svg {
+  width: 101px;
+  height: 77px;
+}
+
+.production__show:hover svg {
+  width: 121px;
+  height: 92px;
+}
+
+.production__show:active svg {
+  width: 81px;
+  height: 62px;
 }
 
 .production__button-order {
