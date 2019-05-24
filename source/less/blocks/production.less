@@ -58,15 +58,25 @@
 }
 
 .production__show {
+  .button-norm();
   position: absolute;
   top: 35px;
   left: 82px;
   background-color: transparent;
+  outline: none;
+  border: none;
 }
 
 .production__show:hover,
-.production__show:active,
 .production__show:focus {
+  top: 28px;
+  left: 70px;
+  outline: none;
+}
+
+.production__show:active {
+  top: 42px;
+  left: 90px;
   outline: none;
 }
 
@@ -83,6 +93,8 @@
 .production__show:active svg {
   width: 81px;
   height: 62px;
+  object-fit: contain;
+  opacity: 0.3;
 }
 
 .production__button-order {
@@ -121,8 +133,21 @@
   }
 
   .production__show {
-    top: 190px;
-    left: 280px;
+    top: 187px;
+    left: 283px;
+  }
+
+  .production__show:hover,
+  .production__show:focus {
+    top: 178px;
+    left: 273px;
+    outline: none;
+  }
+
+  .production__show:active {
+    top: 194px;
+    left: 291px;
+    outline: none;
   }
 
   .production__title {
@@ -155,26 +180,42 @@
 
 @media (min-width: @desktop-width) {
   .production {
+    position: relative;
     width: 1049px;
-    height: 455px;
+    min-height: 455px;
     flex-wrap: wrap;
-    margin-top: 28px;
+    margin-top: 26px;
     margin-bottom: 101px;
   }
 
   .production__video img {
     order: -1;
     width: 682px;
+    position: absolute;
   }
 
   .production__show {
     left: 288px;
   }
 
+  .production__show:hover,
+  .production__show:focus {
+    top: 184px;
+    left: 280px;
+  }
+
+  .production__show:active {
+    top: 198px;
+    left: 302px;
+    outline: none;
+  }
+
   .production__title {
     width: 160px;
-    padding-top: 93px;
+    padding-top: 95px;
     padding-left: 37px;
+    margin-right: 130px;
+    margin-left: auto;
   }
 
   .production__title::before {
@@ -184,12 +225,15 @@
 
   .production__text {
     width: 230px;
-    padding-top: 11px;
-    padding-left: 37px;
+    margin-right: 60px;
+    margin-left: auto;
+    padding-top: 9px;
+    padding-left: 39px;
+    padding-bottom: 3px;
   }
 
   .production__button-order {
-    width: 230px;
+    width: 228px;
     margin-top: 45px;
     margin-bottom: 45px;
     margin-right: 57px;

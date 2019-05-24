@@ -1,0 +1,232 @@
+.contact {
+  .list-reset();
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.contact li {
+  position: relative;
+}
+
+.contact__phone-numbers {
+  .mp-reset();
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.contact__title {
+  .mp-reset();
+  position: absolute;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+  font-size: 17px;
+  line-height: 18px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: @font-sea-foam-blue;
+  text-transform: uppercase;
+  text-align: left;
+  font-weight: bold;
+}
+
+.contact__title::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  right: 0;
+  width: 75%;
+  height: 1px;
+  background: @bg-sea-foam-blue;
+}
+
+.contact__phone-numbers input {
+  .mp-reset();
+  width: 100%;
+  padding-bottom: 16px;
+  padding-top: 40px;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #000000;
+  font-size: 17px;
+  line-height: 18px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: @font-dark-grey;
+  font-weight: normal;
+  text-align: left;
+}
+
+.contact__phone-numbers svg {
+  position: absolute;
+  top: 36px;
+  right: 10px;
+  width: 24.8px;
+  height: 24.3px;
+  object-fit: contain;
+  opacity: 0.2;
+}
+
+.contact__phone-numbers input::placeholder {
+  color: rgba(68, 68, 68, 0.3);
+}
+
+.contact__phone-numbers:hover input,
+.contact__phone-numbers:active input {
+  border-bottom: 2px solid @border-sea-foam-blue-three;
+}
+
+.contact__phone-numbers:hover svg,
+.contact__phone-numbers:active svg {
+  fill: @fill-sea-foam-blue-three;
+}
+
+.contact__e-mail {
+  position: relative;
+  .mp-reset();
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.contact__e-mail input {
+  .mp-reset();
+  width: 100%;
+  padding-bottom: 16px;
+  padding-top: 40px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #000000;
+  font-size: 17px;
+  line-height: 18px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: @font-dark-grey;
+  font-weight: normal;
+  text-align: left;
+}
+
+.contact__e-mail svg {
+  position: absolute;
+  top: 35px;
+  right: 7px;
+  width: 32px;
+  height: 27px;
+  object-fit: contain;
+  opacity: 0.2;
+}
+
+.contact__e-mail input::placeholder {
+  color: rgba(68, 68, 68, 0.3);
+}
+
+.contact__e-mail:hover input,
+.contact__e-mail:active input {
+  border-bottom: 2px solid @border-sea-foam-blue-three;
+}
+
+.contact__e-mail:hover svg,
+.contact__e-mail:active svg {
+  fill: @fill-sea-foam-blue-three;
+}
+
+@media (min-width: @tablet-width) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 166.5px;
+    margin-bottom: 2px;
+  }
+
+  .contact__phone-numbers {
+    .mp-reset();
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+  }
+
+  .contact__title::after {
+    display: none;
+  }
+
+  .contact__title {
+    .mp-reset();
+    font-size: 17px;
+    top: 5px;
+    left: -168px;
+  }
+
+  .contact__phone-numbers input {
+    .mp-reset();
+    padding-left: 15px;
+    padding-bottom: 13px;
+    font-size: 19px;
+    background-color: @bg-white-two;
+  }
+
+  .contact__phone-numbers svg {
+    position: absolute;
+    top: 0;
+    right: 28px;
+  }
+
+  .contact__e-mail {
+    .mp-reset();
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+  }
+
+  .contact__e-mail label {
+    .mp-reset();
+    margin-right: 28px;
+    font-size: 19px;
+  }
+
+  .contact__e-mail input {
+    .mp-reset();
+    padding-left: 15px;
+    padding-bottom: 13px;
+    font-size: 19px;
+    background-color: @bg-white-two;
+  }
+
+  .contact__e-mail svg {
+    position: absolute;
+    top: 0;
+    right: 22px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contact {
+    margin-left: 111px;
+    margin-right: 112px;
+    margin-bottom: 0;
+  }
+
+  .contact__title {
+    top: 6px;
+    left: -115px;
+  }
+
+  .contact__phone-numbers svg {
+    right: 8px;
+  }
+
+  .contact__e-mail svg {
+    right: 6px;
+    top: 2px;
+  }
+}

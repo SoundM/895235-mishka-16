@@ -9,7 +9,7 @@
       // Picture element HTML5 shiv
       document.createElement( "picture" );
     </script>
-    <script src="js/picturefill.js" async></script>
+    <script src="js/picturefill.min.js" async></script>
     <link rel="preload" href="css/style.min.css" as="style">
     <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
@@ -78,104 +78,97 @@
         <h2 class="main-title">Вязание на заказ</h2>
       </div>
 
-      <section class="order-form">
+      <section class="main-form__order-form">
         <h3 class="visually-hidden">Форма заказа</h3>
-        <form class="order-form__form" action="https://echo.htmlacademy.ru" method="post">
-          <p class="order-form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+        <form class="main-form__form" action="https://echo.htmlacademy.ru" method="post">
+          <p class="main-form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 
-          <fieldset class="order-form__filters-field">
-            <legend class="order-form__filters-field--title">Тип</legend>
-            <ul class="order-form__item-type item-type">
-              <li class="item-type__item">
-                <input class="visually-hidden item-type__input item-type__input--radio" type="radio" name="type" id="type-accessories" value="home-accessories" checked="">
-                <label for="type-accessories">Аксессуар для интерьера</label>
-              </li>
-              <li class="item-type__item">
-                <input class="visually-hidden item-type__input item-type__input--radio" type="radio" name="type" id="type-toy" value="toy">
-                <label for="type-toy">Детская игрушка</label>
-              </li>
-            </ul>
-          </fieldset>
+          <ul class="main-form__list  order-form">
+            <li class="order-form__filters-field">
+              <span class="order-form__filters-field--title">Тип</span>
+              <ul class="order-form__item-type item-type">
+                <li class="item-type__item">
+                  <input class="visually-hidden item-type__input item-type__input--radio" type="radio" name="type" id="type-accessories" value="home-accessories" checked="">
+                  <label for="type-accessories">Аксессуар для интерьера</label>
+                </li>
+                <li class="item-type__item">
+                  <input class="visually-hidden item-type__input item-type__input--radio" type="radio" name="type" id="type-toy" value="toy">
+                  <label for="type-toy">Детская игрушка</label>
+                </li>
+              </ul>
+            </li>
 
-          <fieldset class="order-form__filters-field">
-            <legend class="order-form__filters-field--title">Цвет</legend>
-            <ul class="order-form__color-list color-list">
-              <li class="color-list__item">
-                <input class="visually-hidden color-list__input color-list__input--checkbox" type="checkbox" name="white" id="white" checked>
-                <label for="white">Белый</label>
-              </li>
-              <li class="color-list__item">
-                <input class="visually-hidden color-list__input color-list__input--checkbox" type="checkbox" name="grey" id="grey" checked>
-                <label for="grey">Серый</label>
-              </li>
-              <li class="color-list__item">
-                <input class="visually-hidden color-list__input color-list__input--checkbox" type="checkbox" name="tiffani" id="tiffani">
-                <label for="tiffani">«Тиффани»</label>
-              </li>
-              <li class="color-list__item">
-                <input class="visually-hidden color-list__input color-list__input--checkbox" type="checkbox" name="black" id="black">
-                <label for="black">Черный</label>
-              </li>
-              <li class="color-list__item">
-                <input class="visually-hidden color-list__input color-list__input--checkbox" type="checkbox" name="pink" id="pink">
-                <label for="pink">Розовый</label>
-              </li>
-              <li class="color-list__item">
-                <input class="visually-hidden color-list__input color-list__input--checkbox" type="checkbox" name="orange" id="orange">
-                <label for="orange">Оранжевый</label>
-              </li>
-            </ul>
-          </fieldset>
-
-          <fieldset class="order-form__filters-field">
-            <legend class="order-form__filters-field--title">Фио</legend>
-            <ul class="order-form__full-name full-name">
-              <li class="full-name__item">
-                <label for="name">Имя</label>
-                <input type="text" name="name" id="name" placeholder="Введите ваше имя*" required="">
-              </li>
-              <li class="full-name__item">
-                <label for="surname">Фамилия:</label>
-                <input type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required="">
-              </li>
-              <li class="full-name__item">
-                <label for="fathers-name">Отчество:</label>
-                <input type="text" name="fathers-name" id="fathers-name" placeholder="Отчество, если желаете">
-              </li>
-            </ul>
-          </fieldset>
-
-          <fieldset class="order-form__filters-field">
-            <legend class="order-form__filters-field--title">Тел</legend>
-            <ul class="order-form__contacts-tel contact-phone-numbers">
-              <li class="contact-phone-numbers__item">
-                <label class="visually-hidden" for="phone-number">Телефон</label>
-                <input type="tel" name="phone-number" id="phone-number" pattern="[+]{1}[0-9]{1} [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" placeholder="+7 XXX XXX XX XX*" required="">
-                <svg class="contact-phone-numbers__icon-phone" width="24.829px" height="24.333px">
-                  <use xlink:href="img/sprite.svg#icon-phone"></use>
-                </svg>
-              </li>
-            </ul>
-          </fieldset>
-
-          <fieldset class="order-form__filters-field">
-            <legend class="order-form__filters-field--title">E-mail</legend>
-            <ul class="order-form__contacts-e-mail contact-e-mail">
-              <li class="contact-e-mail__item">
-                <label class="visually-hidden" for="e-mail">E-mail</label>
-                <input type="email" name="e-mail" id="e-mail" placeholder="Ваш E-mail*" required="">
-                <svg class="contact-e-mail__icon-mail" width="32px" height="21px">
-                  <use xlink:href="img/sprite.svg#icon-mail"></use>
-                </svg>
-              </li>
-            </ul>
-          </fieldset>
-
-          <fieldset class="order-form__filters-field">
-            <legend class="order-form__filters-field--title">Доп</legend>
-            <label class="visually-hidden" for="more-info">Дополнительно</label>
-            <textarea name="more-info" id="more-info" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-          </fieldset>
+            <li class="order-form__filters-field">
+              <span class="order-form__filters-field--title">Цвет</span>
+              <ul class="order-form__color-list color-list">
+                <li class="color-list__item">
+                  <input class="visually-hidden color-list__input color-list__input--checkbox" type="checkbox" name="white" id="white" checked>
+                  <label for="white">Белый</label>
+                </li>
+                <li class="color-list__item">
+                  <input class="visually-hidden color-list__input color-list__input--checkbox" type="checkbox" name="grey" id="grey" checked>
+                  <label for="grey">Серый</label>
+                </li>
+                <li class="color-list__item">
+                  <input class="visually-hidden color-list__input color-list__input--checkbox" type="checkbox" name="tiffani" id="tiffani">
+                  <label for="tiffani">«Тиффани»</label>
+                </li>
+                <li class="color-list__item">
+                  <input class="visually-hidden color-list__input color-list__input--checkbox" type="checkbox" name="black" id="black">
+                  <label for="black">Черный</label>
+                </li>
+                <li class="color-list__item">
+                  <input class="visually-hidden color-list__input color-list__input--checkbox" type="checkbox" name="pink" id="pink">
+                  <label for="pink">Розовый</label>
+                </li>
+                <li class="color-list__item">
+                  <input class="visually-hidden color-list__input color-list__input--checkbox" type="checkbox" name="orange" id="orange">
+                  <label for="orange">Оранжевый</label>
+                </li>
+              </ul>
+            </li>
+            <li class="order-form__filters-field">
+              <span class="order-form__filters-field--title">Фио</span>
+              <ul class="order-form__full-name full-name">
+                <li class="full-name__item">
+                  <label for="name">Имя</label>
+                  <input type="text" name="name" id="name" placeholder="Введите ваше имя*" required="">
+                </li>
+                <li class="full-name__item">
+                  <label for="surname">Фамилия:</label>
+                  <input type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required="">
+                </li>
+                <li class="full-name__item">
+                  <label for="fathers-name">Отчество:</label>
+                  <input type="text" name="fathers-name" id="fathers-name" placeholder="Отчество, если желаете">
+                </li>
+              </ul>
+            </li>
+            <li class="order-form__filters-field">
+              <span class="visually-hidden">Контактные данные.</span>
+              <ul class="order-form__contacts contact">
+                <li class="contact__phone-numbers">
+                  <label class="contact__title" for="phone-number">Тел</label>
+                  <input type="tel" name="phone-number" id="phone-number" pattern="[+]{1}[0-9]{1} [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" placeholder="+7 XXX XXX XX XX*" required="">
+                  <svg class="contact-phone-numbers__icon-phone" width="24.829px" height="24.333px">
+                    <use xlink:href="img/sprite.svg#icon-phone"></use>
+                  </svg>
+                </li>
+                <li class="contact__e-mail">
+                  <label class="contact__title" for="e-mail">E-mail</label>
+                  <input type="email" name="e-mail" id="e-mail" placeholder="Ваш E-mail*" required="">
+                  <svg class="contact-e-mail__icon-mail" width="32px" height="21px">
+                    <use xlink:href="img/sprite.svg#icon-mail"></use>
+                  </svg>
+                </li>
+              </ul>
+            </li>
+            <li class="order-form__filters-field order-form__filters-field--more-info">
+              <span class="visually-hidden">Дополнительно</span>
+              <label class="order-form__filters-field--title" for="more-info">Доп</label>
+              <textarea name="more-info" id="more-info" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </li>
+          </ul>
 
           <div class="order-form__footer">
             <p class="order-form__required-text">*Поля обязательны для заполнения</p>
@@ -234,7 +227,7 @@
       </div>
     </footer>
 
-    <script src="js/menu.js"></script>
+    <script src="js/menu.min.js"></script>
 
   </body>
 </html>
