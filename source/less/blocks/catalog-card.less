@@ -21,7 +21,8 @@
   border-left: solid 1px @border-shadows-grey;
 }
 
-.catalog-card__title-wrapper:hover {
+.catalog-card__title-wrapper:hover,
+.catalog-card__title-wrapper:focus {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -44,7 +45,8 @@
   font-weight: bold;
 }
 
-.catalog-card__title:hover {
+.catalog-card__title:hover,
+.catalog-card__title:focus {
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -89,6 +91,7 @@
 }
 
 .catalog-card__order:hover,
+.catalog-card__order:focus,
 .catalog-card__order:active {
   .mp-reset();
   object-fit: contain;
@@ -100,7 +103,8 @@
   height: 18px;
 }
 
-.catalog-card__order:hover svg {
+.catalog-card__order:hover svg,
+.catalog-card__order:focus svg {
   fill: @fill-sea-foam-blue;
   object-fit: contain;
   opacity: 1;

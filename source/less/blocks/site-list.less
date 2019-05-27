@@ -42,12 +42,13 @@
 }
 
 .site-list__item--logo a {
-  padding-top: 20px;
-  padding-bottom: 24px;
+  padding-top: 22px;
+  padding-bottom: 22px;
   padding-left: 36.25%;
 }
 
-.site-list__logo-icon:hover {
+.site-list__logo-icon:hover,
+.site-list__logo-icon:focus {
   opacity: 0.6;
 }
 
@@ -80,7 +81,9 @@
 }
 
 .site-list__item--link:hover .site-list__search-icon,
-.site-list__item--link:hover .site-list__cart-icon {
+.site-list__item--link:hover .site-list__cart-icon,
+.site-list__item--link:focus .site-list__search-icon,
+.site-list__item--link:focus .site-list__cart-icon {
   fill: @font-sea-foam-blue;
   opacity: 1;
   cursor: pointer;
@@ -92,7 +95,8 @@
   opacity: 0.3;
 }
 
-a.site-list__item--link:hover span {
+a.site-list__item--link:hover span,
+a.site-list__item--link:focus span {
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -140,8 +144,8 @@ a.site-list__item--link:active span {
   .site-list__item--logo a {
     .mp-reset();
     padding-left: 14%;
-    padding-top: 20px;
-    padding-bottom: 22px;
+    padding-top: 22px;
+    padding-bottom: 20px;
   }
 
   .site-list__item--search {
@@ -164,7 +168,7 @@ a.site-list__item--link:active span {
   }
 
   .site-list__item--cart {
-    width: 41%;
+    width: 40.7%;
     order: -3;
   }
 
@@ -172,7 +176,7 @@ a.site-list__item--link:active span {
     justify-content: flex-end;
     padding-top: 30px;
     padding-bottom: 34px;
-    padding-right: 51px;
+    padding-right: 48px;
   }
 
   .site-list__search-icon {
@@ -207,11 +211,11 @@ a.site-list__item--link:active span {
   }
 
   .site-list__item--order a {
-    padding-left: 35px;
+    padding-left: 37px;
   }
 
   .site-list__item--delivery a {
-    padding-right: 51px;
+    padding-right: 48px;
   }
 
   .site-list__item--delivery {
@@ -259,13 +263,26 @@ a.site-list__item--link:active span {
     padding-bottom: 34px;
   }
 
+  .site-list__item--search a {
+    padding: 31px 32px 22px 32px;
+  }
+
   .site-list__item--catalog a {
     padding-right: 34px;
+    padding-left: 49px;
+  }
+
+  .site-list__item--cart a {
+    padding-right: 52px;
   }
 
   .site-list__logo-icon {
     width: 148px;
     height: 72px;
+  }
+
+  .site-list__item--delivery a {
+    padding-right: 51px;
   }
 
   .site-list__item--logo {

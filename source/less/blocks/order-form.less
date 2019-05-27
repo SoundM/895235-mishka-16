@@ -56,7 +56,7 @@
   .mp-reset();
   width: 80%;
   margin-top: 14px;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   margin-left: 8.9%;
   margin-right: auto;
   font-size: 14px;
@@ -97,6 +97,7 @@
 }
 
 .order-form__filters-field:hover textarea,
+.order-form__filters-field:focus textarea,
 .order-form__filters-field:active textarea {
   border: 2px solid @border-sea-foam-blue-three;
 }
@@ -141,7 +142,7 @@
   }
 
   .order-form__filters-field:nth-child(4) {
-    padding-top: 67px;
+    padding-top: 68px;
     margin-bottom: 0;
     padding-bottom: 17px;
     background-color: @bg-white-two;
@@ -174,6 +175,8 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: baseline;
+    font-size: 19px;
+    line-height: 17px;
   }
 
   .order-form__required-text {
@@ -220,12 +223,16 @@
     padding-top: 35px;
     padding-right: 223px;
     padding-left: 224px;
-    padding-bottom: 48px;
+    padding-bottom: 47px;
   }
 
   .order-form__filters-field textarea {
     width: 72.2%;
     margin-left: 8%;
     margin-top: 22px;
+  }
+
+  .order-form__send-btn {
+    width: 276px;
   }
 }

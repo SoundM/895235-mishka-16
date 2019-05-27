@@ -76,11 +76,13 @@
 }
 
 .contact__phone-numbers:hover input,
+.contact__phone-numbers:focus input,
 .contact__phone-numbers:active input {
   border-bottom: 2px solid @border-sea-foam-blue-three;
 }
 
 .contact__phone-numbers:hover svg,
+.contact__phone-numbers:focus svg,
 .contact__phone-numbers:active svg {
   fill: @fill-sea-foam-blue-three;
 }
@@ -115,7 +117,7 @@
 .contact__e-mail svg {
   position: absolute;
   top: 35px;
-  right: 7px;
+  right: 5px;
   width: 32px;
   height: 27px;
   object-fit: contain;
@@ -127,11 +129,13 @@
 }
 
 .contact__e-mail:hover input,
+.contact__e-mail:focus input,
 .contact__e-mail:active input {
   border-bottom: 2px solid @border-sea-foam-blue-three;
 }
 
 .contact__e-mail:hover svg,
+.contact__e-mail:focus svg,
 .contact__e-mail:active svg {
   fill: @fill-sea-foam-blue-three;
 }
@@ -166,7 +170,7 @@
   .contact__phone-numbers input {
     .mp-reset();
     margin-left: 166px;
-    padding-left: 15px;
+    padding-left: 18px;
     padding-bottom: 17px;
     font-size: 17px;
     background-color: @bg-white-two;
@@ -174,8 +178,8 @@
 
   .contact__phone-numbers svg {
     position: absolute;
-    top: -2px;
-    right: 28px;
+    top: -4px;
+    right: 26px;
   }
 
   .contact__e-mail {
@@ -189,7 +193,6 @@
 
   .contact__e-mail label {
     .mp-reset();
-    margin-right: 28px;
     font-size: 17px;
   }
 
@@ -204,7 +207,7 @@
 
   .contact__e-mail svg {
     position: absolute;
-    top: -2px;
+    top: -4px;
     right: 22px;
   }
 }

@@ -19,10 +19,12 @@
 }
 
 .copyright__link svg {
+  padding-top: 3px;
   fill: @bg-sea-foam-blue;
 }
 
-.copyright__link:hover svg {
+.copyright__link:hover svg,
+.copyright__link:focus svg {
   fill: @fill-icon-sea-blue;
   opacity: 1;
   cursor: pointer;
@@ -34,7 +36,8 @@
   cursor: pointer;
 }
 
-.copyright__link:hover b {
+.copyright__link:hover b,
+.copyright__link:focus b {
   cursor: pointer;
 }
 
@@ -46,14 +49,21 @@
 @media (min-width: @tablet-width) {
   .copyright__link {
     .mp-reset();
-    width: 185px;
+    width: 182px;
     margin-right: 50px;
-    margin-top: 22px;
+    margin-top: 25px;
     margin-bottom: 23px;
-    margin-left: 61px;
+    margin-left: 58px;
   }
 
   .copyright__link svg {
     padding-top: 9px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright__link {
+    padding: 0;
+    width: 185px;
   }
 }
